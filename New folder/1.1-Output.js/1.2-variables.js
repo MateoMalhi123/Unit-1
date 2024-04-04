@@ -1,5 +1,5 @@
 //PART 1
-console.log("first task: \n")
+console.log("first task: \n");
 // here i set the length and width values
 let length = 10;
 let width = 5;
@@ -10,9 +10,9 @@ let area =  length*  width;
 console.log(area,"\n");
 console.log("Area:",area,"\n\n");
 //PART 2
-console.log(" second task\n")
+console.log(" second task\n");
 let first_name = "Santa";
 var last_name = "Claws";
 var last_name = "Claus";
 
-console.log("I still believe in",first_name,last_name+".")
+console.log("I still believe in",first_name,last_name+".");
