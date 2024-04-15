@@ -1,35 +1,47 @@
-// Part 1
+// 1.5 - Conditionals 1.js PART 1
+const prompt = require('prompt-sync')();
 
-//Declare initial variables
-let celsius = 100;
-let fahrenheit = 0;
+// Ask the user for their age
+let age = parseInt(prompt("How old are you? "));
 
-// Use celcius to fahrenheit formula
-fahrenheit = (celsius * 9/5) + 32;
+// Check if 50 years old or older
+if (age >= 50) {
+    console.log("You qualify for the senior discount! It's a good day to be old!");
+} 
+else if (age < 16) {
+    // Check if younger than 16
+    console.log("You're not old enough to drive yet. Womp Womp.");
+}
 
-//print it
-console.log(fahrenheit)
+// Determine if the user's age is even or odd and print that to the screen
+if (age % 2 === 0) {
+    console.log("Your age is an even number. That's pretty cool!");
+} 
+else {
+    console.log("Your age is an odd number. That's pretty cool!");
+}
 
-//Part 2
-//change fahrenehit to 77
-fahrenheit = 77;
+// Ask the user for their name
+let userName = prompt("What is your name? ");
 
-//use celcius to fahrenheit
-celsius = (fahrenheit - 32) * 5/9;
+// Conditional checks on the userName
+if (userName === "Mr. J") {
+    console.log("🐠"); // secret language to communicate with mr j
+} 
+else if (userName.length > 7) {
+    console.log("You have a long name.");
+}
 
-//print result
-console.log(celsius);
+// Ask the user how long their name is
+let nameLength = parseInt(prompt("How many characters are in your name? "));
 
-//Part 3
-console.log("77 degrees Fahrenheit is",celsius,"degrees celsius.");
-
-//Last Part
-
-x1 = -4;
-y1 = 5;
-x2 = 6;
-y2 = 0;
-
-eqtn = (y2 - y1)/(x2 - x1);
-
-console.log("The slope is equal to",eqtn);
+// Checks on the entered name length
+if (nameLength === userName.length) {
+    console.log("That's correct! ✔️");
+} 
+else if (nameLength > userName.length) {
+    console.log("Too high ✖️");
+} 
+else {
+    console.log("Too low ✖️");
+}
