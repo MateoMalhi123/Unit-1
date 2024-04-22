@@ -1,47 +1,46 @@
-// 1.5 - Conditionals 1.js PART 1
+// 1.6 Logical Operators
 const prompt = require('prompt-sync')();
 
-// Ask the user for their age
-let age = parseInt(prompt("How old are you? "));
+let choice = prompt("Would you like to play a game? [y]/n: ") || 'y';
 
-// Check if 50 years old or older
-if (age >= 50) {
-    console.log("You qualify for the senior discount! It's a good day to be old!");
+if (choice !== "n" && choice !== "y") {
+    console.log("THERE WAS AN ERROR!\nyou must input y or n to play.");
 } 
-else if (age < 16) {
-    // Check if younger than 16
-    console.log("You're not old enough to drive yet. Womp Womp.");
-}
-
-// Determine if the user's age is even or odd and print that to the screen
-if (age % 2 === 0) {
-    console.log("Your age is an even number. That's pretty cool!");
+else if (choice === "n") {
+    console.log("okay i guess you don't want to play, you're missing out.");
 } 
 else {
-    console.log("Your age is an odd number. That's pretty cool!");
-}
+    let firstNumber = parseInt(prompt("Enter a whole number: "));
+    if (firstNumber > 10 && firstNumber < 50) {
+        console.log("Input your next number, it must be above 50");
+    }
 
-// Ask the user for their name
-let userName = prompt("What is your name? ");
+    let secondNumber = parseInt(prompt("Enter a second whole number: "), 10);
+    if (secondNumber % 2 == 0) {
+        console.log("This number that you input should be a odd number");
+    } 
+    else {
+        console.log("This number you input now must be an even number");
+    }
 
-// Conditional checks on the userName
-if (userName === "Mr. J") {
-    console.log("🐠"); // secret language to communicate with mr j
-} 
-else if (userName.length > 7) {
-    console.log("You have a long name.");
-}
+    let thirdNumber = parseInt(prompt("Input a third whole number: "), 10);
 
-// Ask the user how long their name is
-let nameLength = parseInt(prompt("How many characters are in your name? "));
+    console.log("\nA set of three numbers is Squirrelly if their sum of all them with an added 1 is divisible by 10");
+    if ((firstNumber + secondNumber + thirdNumber + 1) % 10 == 0) {
+        console.log("The sum of your numbers is infact Squirrelly.");
+    } 
+    else {
+        console.log("The sum of your numbers is infact not Squirrelly.");
+    }
 
-// Checks on the entered name length
-if (nameLength === userName.length) {
-    console.log("That's correct! ✔️");
-} 
-else if (nameLength > userName.length) {
-    console.log("Too high ✖️");
-} 
-else {
-    console.log("Too low ✖️");
-}
+    console.log("\nA set of three numbers is considered Jazzy if MINIMUM two of the numbers are divisible by 3.");
+    let jazzyCount = 0;
+    if (firstNumber % 3 == 0) jazzyCount++;
+    if (secondNumber % 3 == 0) jazzyCount++;
+    if (thirdNumber % 3 == 0) jazzyCount++;
+
+    if (jazzyCount >= 2) {
+        console.log("Your numbers are infact Jazzy.");
+    } 
+    else {
+        console.log("Your numbers are infact not Jazzy.");
