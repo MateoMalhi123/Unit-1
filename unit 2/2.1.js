@@ -52,3 +52,4 @@ function pythagorean(legA, legB, hypoteneuse) {
         console.log(Math.sqrt(hypoteneuse * hypoteneuse - legA * legA));
     }
 }
+
