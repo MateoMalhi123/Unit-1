@@ -45,3 +45,4 @@ else {
     else {
         console.log("Your numbers are infact not Jazzy.");
     }
+}
