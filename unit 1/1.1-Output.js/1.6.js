@@ -1,12 +1,12 @@
 // 1.6 Logical Operators
 const prompt = require('prompt-sync')();
 
-let choice = prompt("Would you like to play a game? [y]/n: ") || 'y';
+let choice = prompt("Would you like to play a game? [y]/n: ") | 'y';
 
 if (choice !== "n" && choice !== "y") {
     console.log("THERE WAS AN ERROR!\nyou must input y or n to play.");
 } 
-else if (choice === "n") {
+else if (choice == "n") {
     console.log("okay i guess you don't want to play, you're missing out.");
 } 
 else {

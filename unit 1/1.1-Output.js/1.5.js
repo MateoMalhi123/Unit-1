@@ -1,4 +1,4 @@
-
+// this is so the following prompts function
 const prompt = require('prompt-sync')();
 
 // user age
@@ -15,7 +15,7 @@ else if (age < 16) {
 // user name
 let userName = prompt("What is your name? ");
 
-if (userName === "Mr. J") {
+if (userName == "Mr. J") {
     console.log("🐠"); 
 } 
 else if (userName.length > 7) {
@@ -26,7 +26,7 @@ else if (userName.length > 7) {
 let nameLength = parseInt(prompt("How many characters are in your name? "));
 
 // checks length
-if (nameLength === userName.length) {
+if (nameLength == userName.length) {
     console.log("That's correct! ✔️");
 } 
 else if (nameLength > userName.length) {
