@@ -19,21 +19,21 @@ function calculator(operator) {
     let num2 = parseFloat(prompt("Enter the second number:"));
 
    
-    if (operator === '+') {
+    if (operator == '+') {
         console.log(num1 + num2);
     } 
-    else if (operator === '-') {
+    else if (operator == '-') {
         console.log(num1 - num2);
     } 
-    else if (operator === '*') {
+    else if (operator == '*') {
         console.log(num1 * num2);
     } 
-    else if (operator === '/') {
+    else if (operator == '/') {
         if (num2 !== 0) {
             console.log(num1 / num2);
         } 
         else {
-            console.log("Cannot divide by zero.");
+            console.log("Cannot divide this by zero.");
         }
     } 
     else {
